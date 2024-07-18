@@ -140,10 +140,11 @@
     background-color: #C0A2DB;
     border-radius: 10px;
     height: auto;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
 }
 
 .main>.nav>.navElement {
-    width: 100px;
+    width: 150px;
     font-family: 'Pretendard';
     font-style: normal;
     font-weight: 600;
@@ -157,6 +158,12 @@
     margin-top: 30px;
     margin-bottom: 30px;
     vertical-align: middle;
+}
+
+.main>.nav>.navElement:hover {
+    border-radius: 10px;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    background-color: #CEB6E3;
 }
 
 
