@@ -1,0 +1,172 @@
+.app {
+    width: 100vw;
+    font-family: "Pretendard";
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    /* 자식 요소의 절대 위치 기준 */
+}
+
+.header>.titleCover {
+    box-sizing: border-box;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    background-color: #9867C5;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.header>.titleCover>a {
+    color: white;
+    margin-right: 20px;
+    /* 요소 간 간격 조정 */
+    text-decoration: none;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 76px;
+}
+
+.header>.titleCover>.profileBar {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.header>.titleCover>.profileBar>img {
+    width: 50px;
+    height: 50px;
+}
+
+.header>.profileCover {
+    display: none;
+    /* 기본 상태는 숨김 */
+    position: absolute;
+    /* 절대 위치 */
+    top: 70px;
+    /* 헤더 바로 아래에 위치 */
+    left: 0;
+    width: 100px;
+    background-color: whitesmoke;
+    z-index: 1000;
+    /* 높은 z-index 값으로 다른 요소 위에 표시 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* 그림자 효과 */
+    flex-direction: column;
+    /* 세로 정렬 */
+    align-items: center;
+}
+
+.header>.profileCover.visible {
+    display: flex;
+    /* visible 클래스가 추가되면 flex로 표시 */
+}
+
+.header>.profileCover>a {
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    background-color: whitesmoke;
+    color: #9867C5 !important;
+    text-decoration: none;
+    /* 링크 밑줄 제거 */
+    color: black;
+    /* 텍스트 색상 */
+    border-bottom: 3px solid #C0A2DB;
+    /* 구분선 */
+}
+
+.header>.profileCover>a:last-child {
+    border-bottom: none;
+    /* 마지막 링크에 구분선 제거 */
+}
+
+.main {
+    padding: 10px 5% 10px 5%;
+}
+
+.main>.searchForm {
+    box-sizing: border-box;
+    width: 100%;
+    font-family: 'Pretendard';
+    font-style: normal;
+    margin-top: 20px;
+    border-radius: 30px;
+    border: 10px solid #C0A2DB;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.main>.searchForm>.sub {
+    height: 60px;
+    width: 4%;
+    background-image: url("../img/search.png");
+    background-size: 66%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    vertical-align: top;
+    border: none;
+    background-color: transparent;
+}
+
+.main>.searchForm>.search {
+    width: 90%;
+    height: 40px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.main>.nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #C0A2DB;
+    border-radius: 10px;
+    height: auto;
+}
+
+.main>.nav>.navElement {
+    width: 100px;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    vertical-align: middle;
+}
+
+
+.main>.nav>.navElement>img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 0px;
+}
+
+.main>.nav>.navElement>p {
+    display: block;
+    margin-top: 0px;
+}
