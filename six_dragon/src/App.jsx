@@ -8,6 +8,10 @@ import JOImg from "./img/job_opening.png"
 import JSImg from "./img/job_search.png"
 import mapImg from "./img/map.png"
 import leafImg from "./img/leaf.png"
+import searchImg from "./img/search1.png"
+import SearchPage from "./pages/SearchPage"
+import JobOpeningPage from './pages/JobOpeningPage'
+import JobSearchPage from './pages/JobSearchPage'
 
 function App() {
 
@@ -24,7 +28,7 @@ function App() {
           <div className='titleCover'>
             <button className='profileBar' onClick={toggleMenu}><img src={barImg} /></button>
             <Link to={"/"}>사이트 이름 뭘로 하지?</Link>
-            <img src={leafImg}/>
+            <img src={leafImg} />
           </div>
           <div className={`profileCover ${menuVisible ? 'visible' : ''}`}>
             <Link to={""}>로그인</Link>
@@ -34,7 +38,7 @@ function App() {
         </div>
         <div className='main'>
           <div className='nav'>
-            <Link className='navElement' to={""}>
+            {/* <Link className='navElement' to={""}>
               <img src={earthImg}/>
               <p>커뮤니티</p>
             </Link>
@@ -45,22 +49,24 @@ function App() {
             <Link className='navElement' to={""}>
               <img src={careImg}/>
               <p>간병인</p>
+            </Link> */}
+            <Link className='navElement' to={"/search"}>
+              <img src={searchImg} />
+              <p>검색</p>
             </Link>
-            <Link className='navElement' to={""}>
-              <img src={JOImg}/>
+            <Link className='navElement' to={"/jobOpening"}>
+              <img src={JOImg} />
               <p>구인해요</p>
             </Link>
-            <Link className='navElement' to={""}>
-              <img src={JSImg}/>
+            <Link className='navElement' to={"/jobSearch"}>
+              <img src={JSImg} />
               <p>구직해요</p>
             </Link>
           </div>
-          <form className='searchForm'>
-            <input type='text' className='search' placeholder='지역 또는 간병인 이름으로 검색하세요.' />
-            <input type='submit' className='sub' value={""}></input>
-          </form>
           <Routes>
-            <Route/>
+            <Route path="/search" element={<SearchPage/>} />
+            <Route path="/jobOpening" element={<JobOpeningPage/>} />
+            <Route path="/jobSearch" element={<JobSearchPage/>} />
           </Routes>
         </div>
       </Router>

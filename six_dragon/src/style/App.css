@@ -94,45 +94,9 @@
 }
 
 .main {
-    padding: 10px 5% 10px 5%;
+    padding: 10px 10% 10px 10%;
 }
 
-.main>.searchForm {
-    box-sizing: border-box;
-    width: 100%;
-    font-family: 'Pretendard';
-    font-style: normal;
-    margin-top: 20px;
-    border-radius: 30px;
-    border: 10px solid #C0A2DB;
-    display: flex;
-    justify-content: space-between;
-}
-
-
-
-.main>.searchForm>.sub {
-    height: 60px;
-    width: 4%;
-    background-image: url("../img/search.png");
-    background-size: 66%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: whitesmoke;
-    border-radius: 20px;
-    vertical-align: top;
-    border: none;
-    background-color: transparent;
-}
-
-.main>.searchForm>.search {
-    width: 90%;
-    height: 40px;
-    padding: 10px;
-    outline: none;
-    border: none;
-    background-color: transparent;
-}
 
 .main>.nav {
     display: flex;
